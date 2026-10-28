@@ -38,6 +38,10 @@ public class BaseClass {
 		driver.close();
 	}
 	
+	public void clearElementValuesinField(WebElement element) {
+		element.clear();
+	}
+	
 	public void closePopup() {
 		/*
 		 * Alert a = driver.switchTo().alert();

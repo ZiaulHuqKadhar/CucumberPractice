@@ -1,4 +1,4 @@
-Feature: To vaalidate the login functionality
+Feature: To validate the login functionality
 
   Background:
     Given User has to launch the browser and hit the saucedemo url

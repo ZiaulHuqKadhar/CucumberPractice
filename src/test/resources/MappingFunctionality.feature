@@ -1,5 +1,8 @@
+@Feature2
+
 Feature: To validate with mapping cred
 
+  @Smoke
   Scenario: To verfiy the username with data tables
     Given User has to launch the browser and hit the url
     And User has to enter email id
@@ -13,4 +16,6 @@ Feature: To validate with mapping cred
       | Password 1 | Password 2   | Password 3   |
       | 12345      | visual_user  | secret_sauce |
       | 222345     | secret_sauce | 12123456     |
+    And User has to click the login button for mapping cred
+    And User has enter into home page or not for mapping cred
     Then User has to close the browser

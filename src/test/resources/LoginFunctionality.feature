@@ -1,8 +1,10 @@
+@Feature1
 Feature: To validate the login functionality
 
   Background:
     Given User has to launch the browser and hit the saucedemo url
 
+  @Sanity
   Scenario: To verify login with visual_user username and password
     # Given visual_user has to launch the browser and hit the saucedemo url
     When visual_user has to enter email in email field
@@ -11,6 +13,7 @@ Feature: To validate the login functionality
     And visual_user has enter into home page or not
     Then visual_user has to close the browsers
 
+  @Regression
   Scenario Outline: To verify login with positive and negative combination
     # Given User has to launch the browser and hit the saucedemo url
     When User has to enter email "<username>" in email field

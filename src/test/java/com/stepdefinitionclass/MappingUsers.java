@@ -1,8 +1,12 @@
 package com.stepdefinitionclass;
 
+import static org.testng.Assert.assertTrue;
+
 import java.util.List;
 import java.util.Map;
 
+import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.pojo.LoginPojo;
 
@@ -49,6 +53,29 @@ public class MappingUsers extends BaseClass {
 	    List<Map<String,String>> twoMap = dataTable.asMaps();
 	    fillText(l.getPassword(), twoMap.get(0).get("Password 3"));
 	    Thread.sleep(6000);
+	}
+	
+	@When("User has to click the login button for mapping cred")
+	public void user_has_to_click_the_login_button_for_mapping_cred() throws InterruptedException {
+	    l = new LoginPojo();
+	    clickAction(l.getLoginBtn());
+	    Thread.sleep(5000);
+	}
+	@When("User has enter into home page or not for mapping cred")
+	public void user_has_enter_into_home_page_or_not_for_mapping_cred() {
+		// Assertion
+		String pageTitle = driver.getTitle();
+		System.out.println("Page title: "+pageTitle);
+		Assert.assertEquals("Pls check the title", pageTitle,"Swag");
+		
+		closePopup();
+	    WebElement element = driver.findElement(By.xpath("//div[text()='Swag Labs']"));
+	    if(element.isDisplayed()) {
+	    	System.out.println("You're reached Home Page!!!");
+	    } else {
+	    	System.out.println("You're NOT reached Home Page!!!");
+	    }
+	    
 	}
 	
 	@Then("User has to close the browser")

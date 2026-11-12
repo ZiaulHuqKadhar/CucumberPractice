@@ -22,8 +22,8 @@ public class MappingUsers extends BaseClass {
 
 	@Given("User has to launch the browser and hit the url")
 	public void user_has_to_launch_the_browser_and_hit_the_url() {
-		launchURL("https://www.saucedemo.com/");
-		maxWindow();
+		//launchURL("https://www.saucedemo.com/");
+		//maxWindow(); //we handle this on Hooks.java class side
 	}
 
 	@When("User has to enter email id")
@@ -81,7 +81,7 @@ public class MappingUsers extends BaseClass {
 	@Then("User has to close the browser")
 	public void user_has_to_close_the_browser() throws InterruptedException {
 		Thread.sleep(5000);
-		closeBrowser();
+		//closeBrowser(); //we handle this on Hooks.java class side 
 	}
 
 }

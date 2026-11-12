@@ -15,8 +15,8 @@ public class VisualUserPage extends BaseClass {
 	LoginPojo l;
 	@Given("user has to launch the browser and hit the saucedemo url")
 	public void user_has_to_launch_the_browser_and_hit_the_saucedemo_url() {
-		 launchURL("https://www.saucedemo.com/");
-		  maxWindow();
+		 //launchURL("https://www.saucedemo.com/");
+		  //maxWindow(); //we handle this on Hooks.java class side
 	}
 	@When("visual_user has to enter email in email field")
 	public void visual_user_has_to_enter_email_in_email_field() {
@@ -45,7 +45,7 @@ public class VisualUserPage extends BaseClass {
 	}
 	@Then("visual_user has to close the browsers")
 	public void visual_user_has_to_close_the_browsers() {
-	    closeBrowser();
+	    //closeBrowser(); //we handle this on Hooks.java class side
 	}
 
 

@@ -15,8 +15,8 @@ public class LoginPage extends BaseClass {
 	LoginPojo l;
 	@Given("User has to launch the browser and hit the saucedemo url")
 	public void user_has_to_launch_the_browser_and_hit_the_saucedemo_url() {
-	  launchURL("https://www.saucedemo.com/");
-	  maxWindow();
+	  //launchURL("https://www.saucedemo.com/");
+	  //maxWindow(); //we handle this on Hooks.java class side
 	}
 
 	/*
@@ -55,7 +55,7 @@ public class LoginPage extends BaseClass {
 	@Then("User has to close the browsers")
 	public void user_has_to_close_the_browser() throws InterruptedException {
 		Thread.sleep(3000);
-		closeBrowser();
+		//closeBrowser(); //we handle this on Hooks.java class side
 	}
 
 
